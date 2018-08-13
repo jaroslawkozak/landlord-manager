@@ -1,6 +1,10 @@
 # landlord-manager
 
 Requirements - ToDo
+- authoisation
+  - Basic
+  - Token?
+  - OAuth2?
 - rental property
   - add agreements
   - tenant user data (account number etc)
