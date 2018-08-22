@@ -1,0 +1,43 @@
+:root {
+  --main-width: 800px;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #222;
+  height: 50px;
+  padding: 0px;
+  color: white;
+}
+
+.top-bar {
+  height: 100%;
+  width: var(--main-width);
+  border-color: green;
+  border: 1px;
+  border-style: solid;
+  margin: auto;
+}
+
+.contentContainer {
+  min-height: 500px;
+  width: var(--main-width);
+  border-color: black;
+  border: 1px;
+  border-style: solid;
+  margin: auto;
+}
+
+.footer {
+  height: 50px;
+  width: var(--main-width);
+  border-color: green;
+  border: 1px;
+  border-style: solid;
+  margin: auto;
+}
+
+
