@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import './App.css';
 
 class App extends Component {
@@ -8,11 +8,39 @@ class App extends Component {
       <div className="App">
         <header className="header">
           <div className="top-bar">
-          aa
+
           </div>
         </header>
         <div className="contentContainer">
-        content
+        <div className="sidebar">
+          <ul className="nav flex-column">
+            <li>
+              Dashboard
+            </li>
+            <li>
+              Properties
+            </li>
+            <li>
+              Rentals
+            </li>
+            <li>
+              Tenants
+            </li>
+            <li>
+              Finances
+            </li>
+            <li>
+              Analysis
+            </li>
+          </ul>
+        </div>
+
+        <div className="content">
+
+        </div>
+
+        
+
         </div>
         <footer className="footer">
         foot
