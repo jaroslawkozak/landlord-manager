@@ -1,0 +1,149 @@
+#%RAML 1.0
+title: lm-data-service API
+baseUri:
+version: v0.1
+
+/property
+	get:
+		queryParameters:
+			access_token:
+	/{propertyId}:
+		get:
+			description: Retrieve a specific property details
+			queryParameters:
+				access_token:
+			responses:
+				200:
+					body:
+						application/json:
+							example: | 
+								{
+									"propertyData" : {
+										"id" : "1"
+										"name" : "default property name",
+										"type" : "property type",
+										"address" : {
+											"country" : "poland",
+											"city" : "sosnowiec",
+											"street" : "3 maja",
+											"houseNumber" : "13/4",
+											"postalCode" : "41-200"
+										},
+										"forRental" : true
+									}
+									"status" : "ok"
+								}
+				204:
+					body:
+						application/json:
+							example: | 
+								{
+									"status" : "property doesn't exist"
+								}
+		put:
+			queryParameters:
+				access_token:
+
+		delete:
+			queryParameters:
+				access_token:
+
+/agreement
+	get:
+	/{agreementId}:
+		get:
+			description: Retrieve a specfic agreement details
+			queryParameters:
+				access_token:
+			responses:
+				200:
+					body:
+						application/json:
+							example: | 
+								{
+									"agreementData" : {
+										"id" : "1"
+										"startDate" : "01-01-2018",
+										"endDate" : "31-12-2018",
+										"propertyData" : {
+											"id" : "1"
+											"name" : "default property name",
+											"type" : "property type",
+											"address" : {
+												"country" : "poland",
+												"city" : "sosnowiec",
+												"street" : "3 maja",
+												"houseNumber" : "13/4",
+												"postalCode" : "41-200"
+											},
+											"forRental" : true
+										}
+										"tenantData" : {
+											"id" : "1"
+											"name" : "default tenant name",
+											"surname" : "default tenant surname",
+											"address" : {
+												"country" : "poland",
+												"city" : "sosnowiec",
+												"street" : "3 maja",
+												"houseNumber" : "13/4",
+												"postalCode" : "41-200"
+											},
+										}
+										"rentFee" : "500.00"
+										"currency" : "PLN"
+									}
+									"status" : "ok"
+								}
+				204:
+					body:
+						application/json:
+							example: | 
+								{
+									"status" : "agreement doesn't exist"
+								}
+		put:
+		delete:
+
+/tenant
+	get:
+	/{tenantId}:
+		get:
+			description: Retreive a specific tenant details
+			queryParameters:
+				access_token:
+			responses:
+				200:
+					body:
+						application/json:
+							example: | 
+								{
+									"tenantData" : {
+										"id" : "1"
+										"name" : "default tenant name",
+										"surname" : "default tenant surname",
+										"address" : {
+											"country" : "poland",
+											"city" : "sosnowiec",
+											"street" : "3 maja",
+											"houseNumber" : "13/4",
+											"postalCode" : "41-200"
+										},
+									}
+									"status" : "ok"
+								}
+				204:
+					body:
+						application/json:
+							example: | 
+								{
+									"status" : "tenant doesn't exist"
+								}
+		put:
+		delete:
+
+/report
+	get:
+
+/forecast
+	get:
