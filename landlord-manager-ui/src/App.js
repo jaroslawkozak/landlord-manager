@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import './App.css';
+import NewPropertyForm from './components/forms/NewPropertyForm.js'
+import PropertyButton from './components/buttons/PropertyButton.js'
+import AddPropertyButton from './components/buttons/AddPropertyButton.js'
 
 class App extends Component {
   render() {
@@ -36,7 +38,9 @@ class App extends Component {
         </div>
 
         <div className="content">
-
+          <AddPropertyButton/>
+          <PropertyButton label="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+          <NewPropertyForm/>
         </div>
 
         

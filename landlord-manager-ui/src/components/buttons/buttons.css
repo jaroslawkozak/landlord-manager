@@ -1,0 +1,35 @@
+.buttonWrapper {
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: lightgray;
+    padding: 10px 10px 1px 10px;
+    height: max-content;
+    margin: 15px;
+}
+
+.iconWrapper {
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: lightgray;
+    padding: 10px;
+    height: max-content;
+}
+
+.addButton{
+    padding: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.buttonLabel {
+    font-size: 13px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 60px;
+}
