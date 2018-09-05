@@ -19,15 +19,16 @@ class PropertyButton extends Component {
     }
 
     render() {
+        var tooltip = "tooltip" + this.props.property.id;
         return (
             <div className="buttonWrapper">
                 <div className="iconWrapper">
                     <img className="icon" src={ houseOutline } alt="property"/>
                 </div>      
                 <div className="buttonLabel">
-                    <span id="TooltipExample">{this.props.label}</span>
-                    <Tooltip placement="top-start" isOpen={this.state.tooltipOpen} target="TooltipExample" toggle={this.toggle}>
-                        {this.props.label}  
+                    <span id={tooltip}>{this.props.property.street}</span>
+                    <Tooltip placement="top-start" isOpen={this.state.tooltipOpen} target={tooltip} toggle={this.toggle}>
+                        {this.props.property.street}  
                     </Tooltip>
                 </div>
             </div>

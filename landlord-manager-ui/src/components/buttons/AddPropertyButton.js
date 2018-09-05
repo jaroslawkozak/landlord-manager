@@ -7,15 +7,22 @@ import './buttons.css'
 class AddPropertyButton extends Component {
     constructor(props) {
         super(props);
-        this.toggle = this.toggle.bind(this);
         this.state = {
-        tooltipOpen: false
+           imgSrc: addImage
         };
+        this.handleMouseOver = this.handleMouseOver.bind(this);
+        this.handleMouseOut = this.handleMouseOut.bind(this);
+      }
+
+    handleMouseOver() {
+        this.setState({
+            imgSrc: addImageGreen
+        });
     }
 
-    toggle() {
+    handleMouseOut() {
         this.setState({
-        tooltipOpen: !this.state.tooltipOpen
+            imgSrc: addImage
         });
     }
 
@@ -23,15 +30,12 @@ class AddPropertyButton extends Component {
         return (
             <div className="buttonWrapper addButton">
                 <div className="iconWrapper">
-                    <img className="icon" src={ addImage } 
-                        onMouseOver={ this.src = addImageGreen }
-                        onMouseOut={ this.src = addImage } 
+                    <img className="icon" onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} src={this.state.imgSrc}
                         alt="add property"/>
                 </div>      
             </div>
         )
     }
 }
-
 
 export default AddPropertyButton;

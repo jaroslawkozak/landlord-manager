@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.css';
 import NewPropertyForm from './components/forms/NewPropertyForm.js'
-import PropertyButton from './components/buttons/PropertyButton.js'
-import AddPropertyButton from './components/buttons/AddPropertyButton.js'
+import PropertiesPage from './components/pages/PropertiesPage.js'
+import SidebarMenu from './components/menus/SidebarMenu';
 
 class App extends Component {
   render() {
@@ -13,39 +14,19 @@ class App extends Component {
 
           </div>
         </header>
-        <div className="contentContainer">
-        <div className="sidebar">
-          <ul className="nav flex-column">
-            <li>
-              Dashboard
-            </li>
-            <li>
-              Properties
-            </li>
-            <li>
-              Rentals
-            </li>
-            <li>
-              Tenants
-            </li>
-            <li>
-              Finances
-            </li>
-            <li>
-              Analysis
-            </li>
-          </ul>
-        </div>
-
-        <div className="content">
-          <AddPropertyButton/>
-          <PropertyButton label="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
-          <NewPropertyForm/>
-        </div>
-
-        
-
-        </div>
+        <Router>
+          <div className="contentContainer">
+            <SidebarMenu/>
+          <div className="content">
+              <div className="container">
+                <Route exact path="/dashboard" component={NewPropertyForm} />
+                <Route exact path="/" component={NewPropertyForm} />
+                <Route path="/properties" component={PropertiesPage} />
+              </div>
+            
+          </div>
+          </div>
+        </Router>
         <footer className="footer">
         foot
         </footer>
